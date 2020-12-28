@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Actor&family=Montserrat+Alternates&display=swap');
 
 * {
     box-sizing: border-box;
@@ -6,9 +6,11 @@
 
 body {
     /*Background */
-    background-color: #2e2e2e;
+    background-color: black;
     background-size: cover;
-    min-height: 100vh;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
 
     /*Aligns elements in the body */
     display: flex;
@@ -16,22 +18,21 @@ body {
     align-items: center;
     justify-content: center;
 
-    /* Font and General Styling */
-    font-family: 'Roboto', sans-serif;
+    /*General Styling */
+    font-family: 'Montserrat Alternates', sans-serif;
     margin: 0;
     padding: 0;
     color: whitesmoke
 }
 
 h1 {
-    margin-top: -10rem;
     font-size: 3.5rem;
     font-weight: normal;
+    margin: 1.3rem;
 }
 
 .countdown-container {
     display: flex;
-    margin-top: 3rem;
 }
 
 .bigtext {
@@ -49,3 +50,34 @@ h1 {
     font-size: 1.2rem;
     margin-left: 0.5rem;
 }
+
+canvas {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -9999;
+}
+
+.wave {
+    animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+    animation-duration: 2.5s;        /* Change to speed up or slow down */
+    animation-iteration-count: infinite;  /* Never stop waving :) */
+    transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+    100% { transform: rotate( 0.0deg) }
+  }  
+  
+  
