@@ -28,7 +28,11 @@ body {
 h1 {
     font-size: 3.5rem;
     font-weight: normal;
-    margin: 1.3rem;
+    margin: 0.7rem;
+}
+
+.countdowntimer {
+    margin-top: -40px;
 }
 
 .countdown-container {
@@ -39,7 +43,7 @@ h1 {
     font-size: 5rem;
     font-weight: bold;
     line-height: 1;
-    margin: 0 2rem;
+    margin: 0.7rem 2rem;
 }
 
 .center {
@@ -78,6 +82,6 @@ canvas {
      50% { transform: rotate(10.0deg) }
      60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
     100% { transform: rotate( 0.0deg) }
-  }  
-  
+}  
+
   
