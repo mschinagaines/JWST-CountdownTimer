@@ -29,6 +29,18 @@ h1 {
     font-size: 3.5rem;
     font-weight: normal;
     margin: 0.7rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 414px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .bigtext {
+        font-size: 3.5rem;
+    }
 }
 
 .countdowntimer {
@@ -37,6 +49,9 @@ h1 {
 
 .countdown-container {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .bigtext {
